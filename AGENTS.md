@@ -69,6 +69,10 @@ Each WP page/CPT maps to a React component in `src/pages/`. The convention:
 - Render `content.rendered` via `dangerouslySetInnerHTML` (Gutenberg HTML output)
 - Handle loading and error states
 
+## Code Style
+
+- **Do not add conditional guards around individual fields in JSX.** Render fields directly and trust the data shape from the API. Keep the JSX output as clean and flat as possible. Loading/error states at the top of the component are fine, but field-level conditionals (e.g. `{value && <p>{value}</p>}`) should be avoided.
+
 ---
 
 ## WordPress Setup Notes

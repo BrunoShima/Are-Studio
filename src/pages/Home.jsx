@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { html } from '../helper-functions'
 import { getPageBySlug } from '../api/wordpress'
 
 export default function Home() {
@@ -16,8 +17,8 @@ export default function Home() {
 
   return (
     <main>
-      <h1 dangerouslySetInnerHTML={{ __html: page.title.rendered }} />
-      <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
+      <h1 {...html(page.title.rendered)} />
+      <div {...html(page.content.rendered)} />
     </main>
   )
 }
