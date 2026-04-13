@@ -1,0 +1,38 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Āre Studio Brand Colors */
+  --black: #000000;
+  --white: #FFFFFF;
+  --cream: #F5F4F0;
+
+  /* Background & Foreground */
+  --font-size: 16px;
+  --background: var(--cream);
+  --foreground: var(--black);
+
+  /* Typography - Work Sans */
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Borders */
+  --border: var(--black);
+  --border-width: 1px;
+}
+
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--black);
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+}
