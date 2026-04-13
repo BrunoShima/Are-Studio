@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { html } from '../helper-functions'
 import { getProducts } from '../api/wordpress'
+import heroBanner from '../assets/homeHero.jpg'
+import homeTeaser from '../assets/homeTeaser.jpg'
 
 export default function Home() {
   const [products, setProducts] = useState([])
@@ -15,9 +17,9 @@ export default function Home() {
     <main>
       {/* ── Hero ─ full viewport height ─────────────────────── */}
       <section className="relative h-screen w-full">
-        <div className="absolute inset-0 bg-placeholder" />
+        <img src={heroBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute bottom-20 left-20">
-          <h1 className="font-light text-[80px] tracking-hero leading-none">
+          <h1 className="font-light text-[80px] tracking-hero leading-none text-white">
             ĀRE STUDIO
           </h1>
         </div>
@@ -74,7 +76,7 @@ export default function Home() {
         <div className="grid grid-cols-5 gap-6">
           {/* Image — 60% */}
           <div className="col-span-3">
-            <div className="aspect-[4/5] bg-placeholder" />
+            <img src={homeTeaser} alt="" className="w-full aspect-[4/5] object-cover" />
           </div>
 
           {/* Text — 40% */}

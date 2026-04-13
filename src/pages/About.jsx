@@ -1,9 +1,11 @@
+import aboutHero from '../assets/aboutHero.jpg'
+
 export default function About() {
   return (
     <main>
       {/* ── Hero ─ 70vh ──────────────────────────────────────── */}
       <section className="h-[70vh] w-full">
-        <div className="w-full h-full bg-placeholder" />
+        <img src={aboutHero} alt="" className="w-full h-full object-cover object-[center_20%]" />
       </section>
 
       {/* ── Two-column text ──────────────────────────────────── */}
