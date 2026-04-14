@@ -20,7 +20,7 @@ export default function Home() {
         <img src={heroBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute bottom-20 left-20">
           <h1 className="font-light text-[80px] tracking-hero leading-none text-white">
-            ĀRE STUDIOS
+            ĀRE STUDIO
           </h1>
         </div>
       </section>
