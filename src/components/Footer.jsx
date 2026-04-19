@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="font-medium text-[10px] tracking-[1.5px] uppercase">
           Vancouver, BC — Est. 2026
         </div>
-        <div className="font-light text-[15px] tracking-tight">@arestudio</div>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="font-light text-[15px] tracking-tight">@arestudio</a>
       </div>
     </footer>
   )
