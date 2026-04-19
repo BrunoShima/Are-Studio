@@ -16,31 +16,31 @@ export default function Home() {
   return (
     <main>
       {/* ── Hero ─ full viewport height ─────────────────────── */}
-      <section className="relative h-screen w-full">
+      <section className="relative h-[50vh] md:h-screen w-full">
         <img src={heroBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute bottom-20 left-20">
-          <h1 className="font-light text-[80px] tracking-hero leading-none text-white">
+        <div className="absolute bottom-8 left-6 md:bottom-20 md:left-20">
+          <h1 className="font-light text-[40px] md:text-[80px] tracking-hero leading-none text-white">
             ĀRE STUDIO
           </h1>
         </div>
       </section>
 
       {/* ── Tagline ──────────────────────────────────────────── */}
-      <section className="py-[120px] px-20">
-        <h2 className="font-light text-[32px] text-center leading-tight">
+      <section className="py-16 md:py-[120px] px-6 md:px-20">
+        <h2 className="font-light text-[24px] md:text-[32px] text-center leading-tight">
           Clothes that mean something.
         </h2>
       </section>
 
       {/* ── Latest Releases ─────────────────────────────────── */}
-      <section className="px-20 pb-[120px]">
+      <section className="px-6 md:px-20 pb-16 md:pb-[120px]">
         {error && (
           <p className="text-center opacity-60 text-[15px]">
             Could not load products — make sure WordPress is running.
           </p>
         )}
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {products.slice(0, 3).map((product) => (
             <Link
               key={product.id}
@@ -72,19 +72,19 @@ export default function Home() {
       </section>
 
       {/* ── Magazine Strip ───────────────────────────────────── */}
-      <section className="px-20 pb-[120px]">
-        <div className="grid grid-cols-5 gap-6">
-          {/* Image — 60% */}
-          <div className="col-span-3">
+      <section className="px-6 md:px-20 pb-16 md:pb-[120px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {/* Image */}
+          <div className="md:col-span-3">
             <img src={homeTeaser} alt="" className="w-full aspect-[4/5] object-cover" />
           </div>
 
-          {/* Text — 40% */}
-          <div className="col-span-2 flex flex-col justify-center space-y-6">
+          {/* Text */}
+          <div className="md:col-span-2 flex flex-col justify-center space-y-6">
             <div className="font-medium text-[10px] tracking-label uppercase">
               Issue No.1
             </div>
-            <h3 className="font-light text-[48px] leading-tight">
+            <h3 className="font-light text-[32px] md:text-[48px] leading-tight">
               Vancouver Stories
             </h3>
             <p className="font-normal text-[15px] leading-[1.7]">

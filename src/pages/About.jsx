@@ -4,16 +4,16 @@ export default function About() {
   return (
     <main>
       {/* ── Hero ─ 70vh ──────────────────────────────────────── */}
-      <section className="h-[70vh] w-full">
+      <section className="h-[40vh] md:h-[70vh] w-full">
         <img src={aboutHero} alt="" className="w-full h-full object-cover object-[center_20%]" />
       </section>
 
       {/* ── Two-column text ──────────────────────────────────── */}
-      <section className="px-20 py-[120px]">
-        <div className="grid grid-cols-2 gap-24">
+      <section className="px-6 md:px-20 py-16 md:py-[120px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
           {/* Left — brand intro */}
           <div className="space-y-6">
-            <h2 className="font-light text-[48px] leading-tight">
+            <h2 className="font-light text-[32px] md:text-[48px] leading-tight">
               About Āre Studio
             </h2>
             <p className="font-normal text-[15px] leading-[1.7]">
@@ -32,7 +32,7 @@ export default function About() {
 
           {/* Right — founder's note */}
           <div className="space-y-6">
-            <h2 className="font-light text-[48px] leading-tight">
+            <h2 className="font-light text-[32px] md:text-[48px] leading-tight">
               Founder's Note
             </h2>
             <p className="font-normal text-[15px] leading-[1.7]">
@@ -51,13 +51,13 @@ export default function About() {
       </section>
 
       {/* ── Brand values ─────────────────────────────────────── */}
-      <section className="px-20 pb-[120px]">
+      <section className="px-6 md:px-20 pb-16 md:pb-[120px]">
         <div className="text-center space-y-4">
-          <div className="font-light text-[32px]">Minimal.</div>
-          <div className="font-light text-[32px]">Urban.</div>
-          <div className="font-light text-[32px]">Intentional.</div>
-          <div className="font-light text-[32px]">Personal.</div>
-          <div className="font-light text-[32px]">Confident.</div>
+          <div className="font-light text-[24px] md:text-[32px]">Minimal.</div>
+          <div className="font-light text-[24px] md:text-[32px]">Urban.</div>
+          <div className="font-light text-[24px] md:text-[32px]">Intentional.</div>
+          <div className="font-light text-[24px] md:text-[32px]">Personal.</div>
+          <div className="font-light text-[24px] md:text-[32px]">Confident.</div>
         </div>
       </section>
     </main>

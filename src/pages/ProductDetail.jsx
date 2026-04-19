@@ -23,7 +23,7 @@ export default function ProductDetail() {
   }, [slug])
 
   if (error) return (
-    <main className="px-20 py-[120px]">
+    <main className="px-6 md:px-20 py-16 md:py-[120px]">
       <p className="text-[15px] opacity-60">
         Product not found — check that WordPress is running and this product exists.
       </p>
@@ -31,7 +31,7 @@ export default function ProductDetail() {
   )
 
   if (!product) return (
-    <main className="px-20 py-[120px]">
+    <main className="px-6 md:px-20 py-16 md:py-[120px]">
       <p className="text-[15px] opacity-60">Loading…</p>
     </main>
   )
@@ -39,9 +39,9 @@ export default function ProductDetail() {
   return (
     <main>
       {/* ── Two-column product layout ────────────────────────── */}
-      <section className="grid grid-cols-[55%_45%]">
-        {/* Left — sticky image */}
-        <div className="sticky top-[73px] h-[calc(100vh-73px)]">
+      <section className="grid grid-cols-1 md:grid-cols-[55%_45%]">
+        {/* Left — image (sticky on desktop only) */}
+        <div className="md:sticky md:top-[73px] md:h-[calc(100vh-73px)] h-[50vh]">
           {product.meta._are_image_url ? (
             <img
               src={product.meta._are_image_url}
@@ -54,7 +54,7 @@ export default function ProductDetail() {
         </div>
 
         {/* Right — scrollable product info */}
-        <div className="px-20 py-20 space-y-8">
+        <div className="px-6 md:px-20 py-10 md:py-20 space-y-8">
           {/* Eyebrow */}
           <div className="font-medium text-[10px] tracking-label uppercase opacity-60">
             Release {product.meta._are_release_number || '—'}
@@ -62,7 +62,7 @@ export default function ProductDetail() {
 
           {/* Product name */}
           <h1
-            className="font-light text-[48px] leading-tight"
+            className="font-light text-[36px] md:text-[48px] leading-tight"
             {...html(product.title.rendered)}
           />
 
@@ -85,11 +85,11 @@ export default function ProductDetail() {
 
       {/* ── The Process ──────────────────────────────────────── */}
       {product.processImages.length > 0 && (
-        <section className="px-20 py-[120px]">
+        <section className="px-6 md:px-20 py-16 md:py-[120px]">
           <div className="space-y-8">
-            <h2 className="font-light text-[48px] leading-tight">The Process</h2>
+            <h2 className="font-light text-[36px] md:text-[48px] leading-tight">The Process</h2>
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {product.processImages.map((item, i) => (
                 <div key={i} className="space-y-3">
                   <div className="aspect-[3/4] bg-placeholder overflow-hidden">
@@ -116,11 +116,11 @@ export default function ProductDetail() {
 
       {/* ── Related Products ─────────────────────────────────── */}
       {related.length > 0 && (
-        <section className="px-20 pb-[120px]">
+        <section className="px-6 md:px-20 pb-16 md:pb-[120px]">
           <div className="space-y-8">
-            <h2 className="font-light text-[48px] leading-tight">Related Products</h2>
+            <h2 className="font-light text-[36px] md:text-[48px] leading-tight">Related Products</h2>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {related.map((item) => (
                 <Link
                   key={item.id}
