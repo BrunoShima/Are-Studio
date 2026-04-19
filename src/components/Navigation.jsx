@@ -28,7 +28,7 @@ export default function Navigation() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden text-[22px] leading-none select-none"
+          className="md:hidden text-[32px] leading-none select-none p-2 -mr-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
