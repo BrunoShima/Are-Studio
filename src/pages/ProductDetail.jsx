@@ -72,6 +72,14 @@ export default function ProductDetail() {
             {...html(product.content.rendered)}
           />
 
+          {/* Add to Cart */}
+          <Link
+            to="/shop"
+            className="block w-full bg-black text-white text-center font-medium text-[13px] tracking-[2px] uppercase py-4 hover:opacity-70 transition-opacity duration-200"
+          >
+            Add to Cart
+          </Link>
+
         </div>
       </section>
 
