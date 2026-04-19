@@ -9,7 +9,7 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-cream border-b border-black px-6 md:px-20 py-6">
       <div className="flex items-center justify-between">
-        <Link to="/" className="font-light text-[15px] tracking-tight" onClick={close}>
+        <Link to="/" className="font-normal text-[20px] tracking-tight" onClick={close}>
           Āre Studio
         </Link>
 
